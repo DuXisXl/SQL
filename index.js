@@ -7,11 +7,16 @@
     });
     console.log(newPlanet);
 */
-
-const seePlanets = await Planet.findAll({
+/* Modo de verificação de dados
+const seePlanets = await Planet.findAll({ 
   where: {
     name: "Terra",
   },
 });
 console.log(seePlanets);
+*/
+
+const updatePlanets = await Planet.findByPk(1);
+      updatePlanets.name = "Terra";
+      await updatePlanets.save();
   })();
