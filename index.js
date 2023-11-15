@@ -15,8 +15,12 @@ const seePlanets = await Planet.findAll({
 });
 console.log(seePlanets);
 */
-
+/* Função usada para update de dados
 const updatePlanets = await Planet.findByPk(1);
       updatePlanets.name = "Terra";
       await updatePlanets.save();
+*/
+
+const deletePlanets = await Planet.findByPk(3);
+      await deletePlanets.destroy();
   })();
